@@ -1,34 +1,58 @@
 kind: "warp-theme"
 name: "Tiation Default Dark"
 version: 1
+description: "Professional dark theme optimized for developer productivity and extended coding sessions"
 colors:
-  background: "#0B0F14"        # near-black, low-glare
-  foreground: "#E6E6E6"        # high-contrast text
-  cursor:     "#FFD166"        # warm cursor
-  selection:  "#1A2230"        # subtle selection
+  # Core terminal colors - optimized for readability and eye comfort
+  background: "#0D1117"        # GitHub dark background, proven for dev work
+  foreground: "#F0F6FC"        # High contrast white with subtle blue tint
+  cursor:     "#F78166"        # Warm orange cursor, easier to track
+  selection:  "#264F78"        # VS Code selection blue, familiar to developers
+  
+  # Enhanced ANSI colors - syntax highlighting optimized
+  black:   "#21262D"           # Subtle gray for comments
+  red:     "#F85149"           # Error red, high visibility
+  green:   "#7EE787"           # Success green, string literals
+  yellow:  "#F1E05A"          # Warning yellow, keywords
+  blue:    "#79C0FF"          # Info blue, functions
+  magenta: "#D2A8FF"          # Purple, types/classes
+  cyan:    "#56D4DD"          # Cyan, constants/imports
+  white:   "#E6EDF3"          # Primary text
 
-  black:   "#111317"
-  red:     "#EF476F"
-  green:   "#06D6A0"
-  yellow:  "#FFD166"
-  blue:    "#118AB2"
-  magenta: "#C792EA"
-  cyan:    "#64D2FF"
-  white:   "#D0D4DB"
+  # Bright variants for enhanced syntax highlighting
+  bright_black:   "#484F58"   # Darker comments, inactive text
+  bright_red:     "#FF7B72"   # Lighter error states
+  bright_green:   "#56D364"   # Git additions, success states
+  bright_yellow:  "#E3B341"   # Modified files, warnings
+  bright_blue:    "#58A6FF"   # Links, method calls
+  bright_magenta: "#BC8CFF"   # Keywords, control structures
+  bright_cyan:    "#39D0D6"   # Operators, special chars
+  bright_white:   "#FFFFFF"   # Pure white for emphasis
 
-  bright_black:   "#2A2E36"
-  bright_red:     "#FF5C7A"
-  bright_green:   "#2EE6B8"
-  bright_yellow:  "#FFE083"
-  bright_blue:    "#3BA6CF"
-  bright_magenta: "#D9A9FF"
-  bright_cyan:    "#7EDBFF"
-  bright_white:   "#FFFFFF"
-
-# UI accents (optional but supported by Warp)
+# Extended Warp UI elements
 accent:
-  primary:  "#3BA6CF"   # highlights, links
-  warning:  "#FFD166"
-  success:  "#2EE6B8"
-  danger:   "#EF476F"
+  primary:    "#58A6FF"       # Primary actions, links
+  secondary:  "#6E7681"       # Secondary text, borders
+  warning:    "#D29922"       # Warnings, modified files
+  success:    "#3FB950"       # Success states, git additions
+  danger:     "#DA3633"       # Errors, git deletions
+  info:       "#1F6FEB"       # Information, hints
+  
+# Additional developer-focused colors
+special:
+  comment:    "#8B949E"       # Code comments
+  string:     "#A5D6FF"       # String literals
+  number:     "#79C0FF"       # Numeric values
+  keyword:    "#FF7B72"       # Language keywords
+  function:   "#D2A8FF"       # Function names
+  variable:   "#FFA657"       # Variable names
+  operator:   "#FF7B72"       # Operators (+, -, etc)
+  bracket:    "#79C0FF"       # Brackets, braces
+  
+# Terminal UI elements
+ui:
+  border:     "#30363D"       # Panel borders
+  inactive:   "#21262D"       # Inactive elements
+  hover:      "#262C36"       # Hover states
+  focus:      "#1F6FEB"       # Focus indicators
 

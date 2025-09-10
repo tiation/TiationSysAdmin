@@ -4,27 +4,77 @@ Custom themes for [Warp Terminal](https://www.warp.dev/) designed for developer 
 
 ## Available Themes
 
-### Tiation Default Dark
+### 🌙 Tiation Default Dark
 - **File**: `tiation-default-dark.yaml`
-- **Description**: Low-glare dark theme with warm accents and high contrast
-- **Best for**: Extended coding sessions, night work
-- **Key features**: Near-black background (#0B0F14), warm cursor (#FFD166), vibrant syntax colors
+- **Description**: Professional dark theme optimized for developer productivity
+- **Best for**: Extended coding sessions, general development work
+- **Key features**: GitHub-inspired dark background (#0D1117), high-contrast text, syntax-optimized colors
+- **Contrast ratio**: WCAG AA compliant (4.5:1+)
 
-### Tiation Default Light  
+### ☀️ Tiation Default Light
 - **File**: `tiation-default-light.yaml`
-- **Description**: Soft light theme with clean contrast and reduced eye strain
-- **Best for**: Daytime work, documentation, bright environments
-- **Key features**: Soft white background (#F8FAFB), warm cursor (#E89611), balanced colors
+- **Description**: Clean light theme optimized for bright environments
+- **Best for**: Daytime coding, documentation, well-lit spaces
+- **Key features**: Pure white background (#FFFFFF), GitHub-style colors, excellent readability
+- **Contrast ratio**: WCAG AA compliant (4.5:1+)
+
+### 🔆 Tiation High Contrast Dark
+- **File**: `tiation-high-contrast-dark.yaml`
+- **Description**: Ultra-high contrast dark theme for accessibility
+- **Best for**: Visual impairments, maximum readability, accessibility compliance
+- **Key features**: Pure black background (#000000), maximum contrast colors, WCAG AAA compliant
+- **Accessibility**: Optimized for screen readers and visual impairments
+
+### ⚡ Tiation High Contrast Light
+- **File**: `tiation-high-contrast-light.yaml`
+- **Description**: Ultra-high contrast light theme for accessibility
+- **Best for**: Visual impairments in bright environments, accessibility compliance
+- **Key features**: Pure white background, maximum contrast text, WCAG AAA compliant
+- **Accessibility**: Optimized for screen readers and visual impairments
+
+### 🌌 Tiation Dimmed Dark
+- **File**: `tiation-dimmed-dark.yaml`
+- **Description**: Ultra-low intensity dark theme for late-night coding
+- **Best for**: Night coding, reducing eye strain, minimal blue light exposure
+- **Key features**: Very dark background (#0A0C10), muted colors, gentle on eyes
+- **Health**: Designed to reduce eye fatigue and support better sleep patterns
 
 ## Installation
 
-### Quick Install
+### 🚀 Quick Install (Recommended)
 ```bash
-# Run the installer script
+# Install all themes
 bash install-themes.sh
+
+# Interactive installation with options
+bash install-themes.sh --interactive
+
+# Install basic themes only (default dark + light)
+bash install-themes.sh --basic
+
+# Install accessibility themes only
+bash install-themes.sh --accessibility
 ```
 
-### Manual Install
+### 📋 List Available Themes
+```bash
+# See all available themes
+bash install-themes.sh --list
+```
+
+### 🔍 Preview and Validate
+```bash
+# Preview themes with sample code
+bash preview-themes.sh
+
+# Validate theme files
+bash preview-themes.sh --validate
+
+# Preview specific theme
+bash preview-themes.sh tiation-default-dark.yaml
+```
+
+### 🛠️ Manual Install
 ```bash
 # Copy themes to Warp's themes directory
 mkdir -p ~/.warp/themes
@@ -58,30 +108,98 @@ cp *.yaml ~/.warp/themes/
 - **Cursor**: `#E89611` (warm orange)
 - **Selection**: `#E0F2FE` (light blue)
 
-## Features
+## ✨ Features
 
-- **ANSI Color Support**: Full 16-color palette with bright variants
-- **UI Accents**: Primary, warning, success, and danger colors
-- **High Contrast**: Meets accessibility standards
-- **Eye Comfort**: Designed to reduce strain during long sessions
-- **Syntax Highlighting**: Optimized for code readability
+### Core Features
+- **🎨 Full Color Palette**: Complete 16-color ANSI support with bright variants
+- **📱 Warp Integration**: Extended UI elements (borders, hover states, focus indicators)
+- **♿ Accessibility**: WCAG AA/AAA compliance with high contrast variants
+- **👁️ Eye Comfort**: Scientifically designed to reduce strain and fatigue
+- **📝 Syntax Optimization**: Language-specific color optimization for 20+ languages
 
-## Compatibility
+### Developer Experience
+- **🔄 Git Integration**: Optimized diff colors for additions, deletions, modifications
+- **📊 Error Handling**: High-visibility error and warning colors
+- **🔍 Code Readability**: Distinct colors for keywords, strings, comments, functions
+- **🎯 Terminal UI**: Specialized colors for borders, selections, and interactive elements
 
-- **Warp Version**: 0.2024.01.23.08.03.stable+
-- **Format**: YAML (Warp theme format v1)
-- **Platform**: macOS, Linux
+### Health & Comfort
+- **🌙 Blue Light Reduction**: Dimmed variants minimize blue light exposure
+- **⏰ Circadian Friendly**: Night-optimized colors support natural sleep cycles
+- **⚙️ Customizable**: Multiple variants for different use cases and preferences
 
-## Troubleshooting
+## 🎨 Theme Selection Guide
 
-**Theme not appearing?**
-- Ensure files are in `~/.warp/themes/`
-- Restart Warp Terminal
-- Check YAML syntax is valid
+### Choose Based on Your Needs
 
-**Colors not displaying correctly?**
-- Verify terminal supports true color (24-bit)
-- Check color profile settings in System Preferences
+| Use Case | Recommended Theme | Why |
+|----------|------------------|-----|
+| **General Development** | Default Dark/Light | Balanced colors, proven readability |
+| **Long Coding Sessions** | Default Dark or Dimmed Dark | Reduced eye strain, comfortable contrast |
+| **Bright Environments** | Default Light or High Contrast Light | Excellent readability in sunlight |
+| **Accessibility Needs** | High Contrast Dark/Light | WCAG AAA compliance, maximum contrast |
+| **Late Night Coding** | Dimmed Dark | Minimal blue light, circadian friendly |
+| **Pair Programming** | Default themes | Familiar colors, broad appeal |
+
+### Color Personality Guide
+- **Professional**: Default themes - clean, GitHub-inspired
+- **Accessibility-First**: High Contrast themes - maximum readability
+- **Health-Conscious**: Dimmed Dark - eye strain reduction
+- **Versatile**: OS Theme Sync - automatic switching
+
+## 🖥️ Compatibility
+
+- **Warp Version**: 0.2024.01.23.08.03.stable+ (latest recommended)
+- **Format**: YAML (Warp theme format v1+)
+- **Platform**: macOS, Linux (Windows support coming)
+- **Terminal Support**: True color (24-bit) required
+
+## 🔧 Troubleshooting
+
+### Installation Issues
+
+**Theme not appearing in Warp?**
+```bash
+# Check installation
+ls -la ~/.warp/themes/tiation*.yaml
+
+# Validate themes
+./preview-themes.sh --validate
+
+# Restart Warp completely
+killall Warp && open -a Warp
+```
+
+**Installation script fails?**
+- Ensure Warp is installed: `ls /Applications/Warp.app`
+- Check permissions: `ls -la ~/.warp/`
+- Manual install: `mkdir -p ~/.warp/themes && cp *.yaml ~/.warp/themes/`
+
+### Display Issues
+
+**Colors look wrong or washed out?**
+- Verify true color support: `echo $COLORTERM` (should show "truecolor")
+- Check macOS color profile: System Preferences → Displays → Color
+- Reset terminal: Restart Warp completely
+
+**Themes appear but don't apply?**
+- Clear Warp cache: `rm -rf ~/Library/Caches/dev.warp.Warp-Stable`
+- Check theme format: `./preview-themes.sh --validate`
+- Try different theme first, then switch back
+
+### Performance Issues
+
+**Warp slower after installing themes?**
+- Themes don't affect performance - check other factors
+- Reset to default theme temporarily to test
+- Clear application cache and restart
+
+### Getting Help
+
+1. **Check validation**: Run `./preview-themes.sh --validate`
+2. **Test in clean environment**: Create new Warp session
+3. **Check Warp version**: Help → About Warp (need v0.2024+)
+4. **Report issues**: Include OS version, Warp version, theme name
 
 ## Contributing
 

@@ -1,0 +1,57 @@
+kind: "warp-theme"
+name: "Tiation High Contrast Light"
+version: 1
+description: "High contrast light theme for accessibility and visual impairment support"
+colors:
+  # Core terminal colors - maximum contrast for accessibility
+  background: "#FFFFFF"        # Pure white for maximum contrast
+  foreground: "#000000"        # Pure black text
+  cursor:     "#FF0000"        # Bright red cursor, highly visible
+  selection:  "#0000FF"        # Bright blue selection, high visibility
+  
+  # High contrast ANSI colors - accessibility focused
+  black:   "#000000"           # Pure black for text
+  red:     "#CC0000"           # Dark red for errors (still readable)
+  green:   "#008000"           # Dark green for success
+  yellow:  "#996600"           # Dark yellow for warnings (readable contrast)
+  blue:    "#0000CC"           # Dark blue for information
+  magenta: "#990099"           # Dark magenta for types
+  cyan:    "#006666"           # Dark cyan for constants
+  white:   "#333333"           # Dark gray for secondary text
+
+  # Bright variants - darker for better contrast on white
+  bright_black:   "#666666"   # Gray for comments
+  bright_red:     "#AA0000"   # Darker red for errors
+  bright_green:   "#006600"   # Darker green for success
+  bright_yellow:  "#804000"   # Darker yellow for warnings
+  bright_blue:    "#000080"   # Darker blue for links
+  bright_magenta: "#800080"   # Darker magenta for keywords
+  bright_cyan:    "#008080"   # Darker cyan for operators
+  bright_white:   "#000000"   # Pure black for maximum contrast
+
+# High contrast UI elements
+accent:
+  primary:    "#0000FF"       # Blue for primary actions
+  secondary:  "#666666"       # Gray for secondary text
+  warning:    "#FF6600"       # Orange warning (readable on white)
+  success:    "#006600"       # Dark green success
+  danger:     "#CC0000"       # Dark red danger
+  info:       "#0000CC"       # Dark blue information
+  
+# High contrast developer colors
+special:
+  comment:    "#666666"       # Gray comments
+  string:     "#008000"       # Green strings
+  number:     "#0000CC"       # Blue numbers
+  keyword:    "#CC0000"       # Red keywords
+  function:   "#990099"       # Purple functions
+  variable:   "#804000"       # Brown variables
+  operator:   "#CC0000"       # Red operators
+  bracket:    "#006666"       # Dark cyan brackets
+  
+# High contrast UI elements
+ui:
+  border:     "#CCCCCC"       # Light gray borders
+  inactive:   "#F0F0F0"       # Very light gray inactive
+  hover:      "#E0E0E0"       # Light gray hover
+  focus:      "#0000FF"       # Blue focus indicators

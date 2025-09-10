@@ -1,0 +1,57 @@
+kind: "warp-theme"
+name: "Tiation Dimmed Dark"
+version: 1
+description: "Ultra-low intensity dark theme for late-night coding sessions and eye strain reduction"
+colors:
+  # Core terminal colors - ultra-low intensity for night use
+  background: "#0A0C10"        # Very dark, almost black with blue tint
+  foreground: "#B8BCC8"        # Soft gray-white, easy on eyes
+  cursor:     "#9D7CD8"        # Soft purple cursor, subtle but visible
+  selection:  "#1A1F29"        # Very subtle selection
+  
+  # Dimmed ANSI colors - reduced intensity for night coding
+  black:   "#161B22"           # Dark gray
+  red:     "#DA6B73"           # Soft red, less aggressive
+  green:   "#5FB37D"           # Muted green
+  yellow:  "#D4B571"           # Warm yellow, reduced intensity
+  blue:    "#6BB6E0"           # Soft blue
+  magenta: "#9D7CD8"           # Soft purple
+  cyan:    "#4AC6B7"           # Gentle cyan
+  white:   "#B8BCC8"           # Soft white
+
+  # Bright variants - slightly more visible but still gentle
+  bright_black:   "#3B4252"   # Medium gray for comments
+  bright_red:     "#E77C85"   # Slightly brighter soft red
+  bright_green:   "#6EC390"   # Slightly brighter green
+  bright_yellow:  "#E0C285"   # Slightly brighter yellow
+  bright_blue:    "#7CC7ED"   # Slightly brighter blue
+  bright_magenta: "#B693E5"   # Slightly brighter purple
+  bright_cyan:    "#5DD3C6"   # Slightly brighter cyan
+  bright_white:   "#D8DDE9"   # Brighter soft white
+
+# Dimmed UI elements
+accent:
+  primary:    "#7CC7ED"       # Soft blue for actions
+  secondary:  "#6C7086"       # Muted gray for secondary
+  warning:    "#D4B571"       # Soft yellow warning
+  success:    "#5FB37D"       # Soft green success
+  danger:     "#DA6B73"       # Soft red danger
+  info:       "#6BB6E0"       # Soft blue information
+  
+# Gentle developer colors
+special:
+  comment:    "#6C7086"       # Muted gray comments
+  string:     "#A6D189"       # Soft green strings
+  number:     "#8CAAEE"       # Soft blue numbers
+  keyword:    "#F4B8E4"       # Soft pink keywords
+  function:   "#CA9EE6"       # Soft purple functions
+  variable:   "#EF9F76"       # Soft orange variables
+  operator:   "#F2D5CF"       # Very soft operator color
+  bracket:    "#BABBF1"       # Soft lavender brackets
+  
+# Gentle UI elements
+ui:
+  border:     "#232A36"       # Very subtle borders
+  inactive:   "#161B22"       # Dark inactive elements
+  hover:      "#1E242E"       # Subtle hover
+  focus:      "#9D7CD8"       # Soft purple focus
