@@ -8,6 +8,11 @@ A collection of system administration tools, configurations, and automation scri
 TiationSysAdmin/
 ├── warp-terminal/          # Warp Terminal configurations and tools
 │   └── session-backup/     # Automatic session backup and restore system
+├── warp-themes/            # Custom Warp Terminal themes
+│   ├── tiation-default-dark.yaml   # Professional dark theme
+│   ├── tiation-default-light.yaml  # Clean light theme
+│   ├── install-themes.sh   # Theme installer script
+│   └── README.md           # Theme documentation
 ├── shell-configuration/    # Enhanced shell configuration system
 │   ├── configs/           # Shell configuration files (.zshrc)
 │   ├── functions/         # Advanced development functions
@@ -50,6 +55,34 @@ sb    # Backup current session
 ```
 
 [→ Full Documentation](warp-terminal/session-backup/docs/README.md)
+
+### Custom Warp Terminal Themes
+
+**Location**: `warp-themes/`
+
+Custom themes designed for developer productivity and eye comfort, with both dark and light variants that sync with your OS theme.
+
+**Features**:
+- ✅ Professional dark theme with low-glare background
+- ✅ Clean light theme with reduced eye strain
+- ✅ High contrast for accessibility
+- ✅ Optimized syntax highlighting colors
+- ✅ OS theme sync support (auto-switch light/dark)
+- ✅ Easy one-command installation
+
+**Quick Install**:
+```bash
+cd warp-themes
+bash install-themes.sh
+```
+
+**Quick Setup** (after installation):
+1. Open Warp → Settings → Appearance
+2. Click "Custom Themes" box
+3. Select "Tiation Default Dark" or "Tiation Default Light"
+4. Enable "Sync with OS" for automatic theme switching
+
+[→ Full Documentation](warp-themes/README.md)
 
 ### Enhanced Shell Configuration System
 
@@ -128,6 +161,7 @@ This repository contains personal system administration tools and configurations
 Completed:
 - [x] **Warp terminal session backup system** - Automatic session management
 - [x] **Enhanced shell configuration** - Performance-optimized shell with developer tools
+- [x] **Custom Warp themes** - Professional dark/light themes with OS sync
 
 Future additions may include:
 

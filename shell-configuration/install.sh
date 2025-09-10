@@ -437,20 +437,63 @@ EOF
 test_installation() {
     print_step "Testing installation"
     
-    # Test if functions are available in a new shell
-    local test_script=$(cat << 'EOF'
-source ~/.zshrc 2>/dev/null || source ~/.bashrc 2>/dev/null
-command -v gstat >/dev/null && echo "✅ Git functions available"
-command -v proj-init >/dev/null && echo "✅ Project functions available"
-command -v backup >/dev/null && echo "✅ Utility functions available"
-[[ -n "$WORKSPACE" ]] && echo "✅ Environment variables set"
-EOF
-    )
+    # Test if functions are available by checking the config files directly
+    local config_file=""
+    local shell_type=$(detect_shell)
     
-    if $SHELL -c "$test_script" | grep -q "✅"; then
-        print_success "Installation test passed"
+    case "$shell_type" in
+        "zsh") config_file="$HOME/.zshrc" ;;
+        "bash") config_file="$HOME/.bashrc" ;;
+        *) print_error "Unknown shell type: $shell_type"; return 1 ;;
+    esac
+    
+    local tests_passed=0
+    
+    # Check if Tiation enhancements are in the config file
+    if grep -q "Tiation Shell Enhancements" "$config_file" 2>/dev/null; then
+        print_success "Shell configuration updated"
+        ((tests_passed++))
     else
-        print_error "Installation test failed"
+        print_error "Shell configuration not updated"
+    fi
+    
+    # Check if aliases file exists and is sourced
+    if [[ -f "$CONFIG_DIR/tiation-aliases.zsh" ]]; then
+        print_success "Aliases file created"
+        ((tests_passed++))
+    else
+        print_error "Aliases file missing"
+    fi
+    
+    # Check if functions autoload file exists
+    if [[ -f "$CONFIG_DIR/functions/autoload.zsh" ]]; then
+        print_success "Functions autoload created"
+        ((tests_passed++))
+    else
+        print_error "Functions autoload missing"
+    fi
+    
+    # Check if development functions file exists
+    if [[ -f "$CONFIG_DIR/functions/dev-functions.zsh" ]]; then
+        print_success "Development functions installed"
+        ((tests_passed++))
+    else
+        print_error "Development functions missing"
+    fi
+    
+    # Test in current shell environment (avoiding subshell issues)
+    if command -v gstat >/dev/null 2>&1; then
+        print_success "Git functions available in current session"
+        ((tests_passed++))
+    else
+        print_info "Git functions will be available after shell restart"
+    fi
+    
+    if [[ $tests_passed -ge 4 ]]; then
+        print_success "Installation test passed ($tests_passed/5 checks)"
+        return 0
+    else
+        print_error "Installation test failed ($tests_passed/5 checks passed)"
         return 1
     fi
 }

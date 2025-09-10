@@ -1,0 +1,33 @@
+kind: "warp-theme"
+name: "Tiation Default Light"
+version: 1
+colors:
+  background: "#F8FAFB"        # soft white, reduce strain
+  foreground: "#1F2937"        # clean dark text
+  cursor:     "#E89611"        # warm cursor
+  selection:  "#E0F2FE"        # light blue selection
+
+  black:   "#374151"
+  red:     "#DC2626"
+  green:   "#10B981"
+  yellow:  "#F59E0B"
+  blue:    "#3B82F6"
+  magenta: "#8B5CF6"
+  cyan:    "#06B6D4"
+  white:   "#F9FAFB"
+
+  bright_black:   "#6B7280"
+  bright_red:     "#EF4444"
+  bright_green:   "#22C55E"
+  bright_yellow:  "#EAB308"
+  bright_blue:    "#6366F1"
+  bright_magenta: "#A855F7"
+  bright_cyan:    "#0891B2"
+  bright_white:   "#FFFFFF"
+
+# UI accents (optional but supported by Warp)
+accent:
+  primary:  "#6366F1"   # highlights, links
+  warning:  "#F59E0B"
+  success:  "#10B981"
+  danger:   "#DC2626"
